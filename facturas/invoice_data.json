@@ -1,0 +1,11 @@
+{
+    "client": {
+        "name": "Jane Doe",
+        "address": "123 Main St, Anytown, USA"
+    },
+    "items": [
+        {"description": "Widget A", "price": 25.00, "quantity": 2},
+        {"description": "Widget B", "price": 15.00, "quantity": 3}
+    ],
+    "tax_rate": 0.07
+}

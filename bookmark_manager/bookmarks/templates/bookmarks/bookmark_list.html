@@ -1,0 +1,24 @@
+<!-- bookmarks/templates/bookmarks/bookmark_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Manager</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Marcadores</h1>
+        <a href="{% url 'add_bookmark' %}" class="btn btn-primary">Agregar Marcador</a>
+        <ul class="list-group mt-3">
+            {% for bookmark in bookmarks %}
+                <li class="list-group-item">
+                    <a href="{{ bookmark.url }}" target="_blank">{{ bookmark.title }}</a>
+                    <a href="{% url 'delete_bookmark' bookmark.id %}" class="btn btn-danger btn-sm float-right">Eliminar</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

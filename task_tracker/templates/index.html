@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/task_tracker/static/style.css">
+</head>
+</head>
+<body>
+    <div class="container">
+        <h1>Task Tracker</h1>
+        <form action="/add" method="POST">
+            <div class="input-field">
+                <input type="text" name="task" required>
+                <label for="task">Enter Task Description</label>
+            </div>
+            <button type="submit" class="btn">Add Task</button>
+        </form>
+        <ul class="collection">
+            {% for task in tasks %}
+                <li class="collection-item">
+                    <span class="{{ 'completed' if task.completed else 'pending' }}">
+                        {{ task.description }}
+                    </span>
+                    <a href="/complete/{{ loop.index0 }}" class="secondary-content">
+                        <i class="material-icons">{{ 'check' if not task.completed else 'close' }}</i>
+                    </a>
+                    <a href="/delete/{{ loop.index0 }}" class="secondary-content">
+                        <i class="material-icons red-text">delete</i>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
