@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Este repositorio contiene varios proyectos desarrollados en Python, que abarcan desde nivel principiante hasta avanzado. Cada proyecto tiene como objetivo aprender y aplicar conceptos clave de programación.
+Este repositorio contiene varios proyectos desarrollados en Python propuestos por Ardit Sulce en su ["Daily Python Projects"](https://dailypythonprojects.substack.com/), que abarcan desde nivel principiante hasta avanzado. Cada proyecto tiene como objetivo aprender y aplicar conceptos clave de programación.
 
 ## Algunos proyectos incluidos:
 
